@@ -1,0 +1,11 @@
+{
+  "name": "cosmetologist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:NayadaS/cosmetologist.git",
+  "author": "Svetlana <rvskpar@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

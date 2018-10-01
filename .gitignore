@@ -1,0 +1,9 @@
+# Read mere about ignoring files https://git-scm.com/docs/gitignore
+.git/
+
+
+# Dependencies:
+/node_modules
+
+.sass-cache/
+public/css/*.css.map
