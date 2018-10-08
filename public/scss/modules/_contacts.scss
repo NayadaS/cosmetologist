@@ -1,0 +1,124 @@
+.social-network {
+  margin-top: 2.5rem;
+  display: flex;
+
+  li {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 3.9rem;
+    background-size: cover;
+  }
+}
+
+.viber {
+  background-image: url(../img/ic-viber.svg);
+}
+
+.facebook {
+  background-image: url(../img/ic-facebook.svg);
+}
+
+.instagram {
+  background-image: url(../img/ic-instagram.svg);
+}
+
+.telephone {
+  background-image: url(../img/ic-phone.svg);
+}
+
+.contacts {
+  img {
+    margin-left: .8rem;
+  }
+}
+
+.phone {
+  letter-spacing: -.07rem;
+}
+
+.main {
+  .contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .phone {
+    margin: 1.7rem 0 1.5rem;
+    color: $color-heading;
+  }
+
+  .social-network {
+    margin: 1.6rem 0;
+
+    li {
+      height: 1.8rem;
+      width: 1.8rem;
+      margin: 0 0 0 3rem;
+    }
+  }
+}
+
+.footer {
+  .social-network {
+    margin: 0 0 1.5rem;
+    justify-content: center;
+
+    li {
+      margin: 0 1.2rem 0;
+    }
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .header {
+    .contacts {
+      display: none;
+    }
+  }
+
+  .main {
+    .contacts {
+      justify-content: flex-end;
+    }
+
+    .social-network {
+      li {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+@media (min-width: $large-screen) {
+  .header {
+    .contacts {
+      display: flex;
+
+      h5,
+      .email {
+        display: none;
+      }
+    }
+
+    .social-network {
+      margin: 0;
+
+      li {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin: 0 0 0 1.5rem;
+      }
+    }
+
+    .phone {
+      margin: .2rem .4rem 0 7rem;
+      line-height: 1;
+    }
+  }
+
+  .main {
+    .contacts {
+      display: none;
+    }
+  }
+}

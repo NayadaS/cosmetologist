@@ -1,0 +1,137 @@
+.content {
+  margin: 0 0 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+h1 {
+  margin: 4rem 2rem 1rem;
+}
+
+h2 {
+  margin: 0 2rem 4rem;
+}
+
+.content-with-img {
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    order: 1;
+    width: 100%;
+  }
+}
+
+.head-section {
+  display: flex;
+  align-items: start;
+  margin: 2rem 2rem 1.5rem;
+
+  h3 {
+    margin: 0 0 0 1.5rem;
+    letter-spacing: -.01rem;
+  }
+}
+
+.content-text {
+  margin: 0 2rem 2rem;
+  line-height: 1.5;
+
+  ul {
+    margin: 0 0 1.5rem;
+    padding-left: 0;
+    list-style-position: inside;
+  }
+
+  h4 {
+    margin: 1.5rem 0 0;
+    color: $color-heading;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  span {
+    color: $color-heading;
+  }
+}
+
+@media (min-width: $small-screen) {
+  .content-with-img {
+    display: block;
+
+    .image {
+      width: 32.2%;
+      height: auto;
+      float: right;
+    }
+  }
+
+  .main-title {
+    background: {
+      image: url(../img/lines.svg);
+      repeat: no-repeat;
+      position: 67% 0;
+    };
+  }
+
+  h1 {
+    margin: 12% 2rem 3%;
+    font-size: 3.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  h1 {
+    margin: 11.272% 0 2.415% 2rem;  // margin: 13% 0 2.415% 2rem; было бы лучше при ширине 1023px
+    font-size: 3.8rem;
+    line-height: 1.21;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.4;
+  }
+}
+
+@media (min-width: $large-screen) {
+  .content {
+    margin: 0 0 3rem;
+  }
+
+  h1 {
+    margin: 11rem 3rem 1.5rem;
+    font-size: 4.6rem;
+    line-height: 1.17;
+  }
+
+  h2 {
+    margin: 0 3rem;
+    font-size: 2.4rem;
+    line-height: 1.33;
+  }
+
+  .head-section {
+    margin: 3rem 3rem 1.5rem;
+  }
+
+  .content-text {
+    margin: 0 3rem 3rem;
+  }
+}
+
+
+// .hidden {
+//   height: 0;
+//   overflow: hidden;
+//   transition: height 0.9s linear;
+// }
+
+// .open-hidden-block {
+//   height: 30%;
+// }

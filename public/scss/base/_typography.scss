@@ -1,0 +1,92 @@
+// Typography style
+
+html {
+  font-size: $base-font-size;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font: {
+    family: $base-font-name, sans-serif;
+    weight: 400;
+    size: 1.6rem;
+  };
+  color: rgba($color-text, .7);
+}
+
+h1,
+h2,
+h3 {
+  font-family: $title-font-name, sans-serif;
+}
+
+h2,
+h4 {
+  font-family: $base-font-name, sans-serif;
+}
+
+h1 {
+  font: {
+    size: 2.8rem;
+    weight: bold;
+  };
+  line-height: 1.29;
+  color: rgba($color-heading, .9);
+}
+
+h2 {
+  font: {
+    size: 1.6rem;
+    weight: normal;
+  };
+  line-height: 1.5;
+  color: rgba($color-text, .9);
+}
+
+h3 {
+  font: {
+    size: 2.4rem;
+    weight: bold;
+  };
+  line-height: normal;
+  color: rgba($color-heading, .9);
+}
+
+h4 {
+  font: {
+    size: 1.6rem;
+    weight: normal;
+  };
+  line-height: 1.5;
+  color: rgba($color-text, .7);
+}
+
+h5 {
+  font: {
+    size: 1.2rem;
+    weight: normal;
+  };
+  line-height: 1.5;
+  color: rgba($color-text, .9);
+}
+
+nav {
+  a {
+    font: {
+      family: $title-font-name, sans-serif;
+      size: 1.6rem;
+    };
+    line-height: 1.5;
+    color: rgba($color-text, .9);
+  }
+}
+
+@media (min-width: $medium-screen) {
+  nav {
+    a {
+      font-size: 1.2rem;
+    }
+  }
+}

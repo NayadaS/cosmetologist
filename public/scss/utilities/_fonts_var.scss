@@ -1,0 +1,14 @@
+$base-font-name : 'Roboto';
+$title-font-name : 'Comfortaa';
+
+$font-path      : '../fonts/';
+
+$base-font-data : (
+  // order of variables
+  // 'font-folder', 'font-file-name', 'font-local-1', 'font-local-2', 'font-weight'
+        1: ('roboto/', 'roboto-regular', 'Roboto Regular', 'Roboto-Regular', 400, 'Roboto'),
+        2: ('comfortaa/', 'comfortaa-regular', 'Comfortaa Regular', 'Comfortaa-Regular', 400, 'Comfortaa'),
+        3: ('comfortaa/', 'comfortaa-bold', 'Comfortaa Bold', 'Comfortaa-Bold', 700, 'Comfortaa')
+);
+
+$base-font-size   : 10px; // 10px 62.5%

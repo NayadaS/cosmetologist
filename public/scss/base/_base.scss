@@ -1,0 +1,25 @@
+
+// Base style (tag only)
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  background: $color-base-bg;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

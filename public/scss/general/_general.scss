@@ -1,0 +1,58 @@
+
+// Footer fixed to bottom
+
+html {
+  position: relative;
+  min-height: 100%;
+
+  body {
+    height: 100%;
+    min-height: .1rem;
+
+    &.menu-open {
+      overflow: hidden; // This class is for an open menu.
+    }
+  }
+}
+
+.wrapper {
+  width: 93.75%;
+  margin: 0 auto;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.header,
+.menu,
+.content,
+.footer {
+  background-color: $color-content-bg;
+}
+
+.nav,
+.social-network {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  a {
+    display: block;
+    height: 100%;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  .wrapper {
+    width: 81%;
+  }
+}
+
+@media (min-width: $large-screen) {
+  .main {
+    .wrapper {
+      width: 78rem;
+    }
+  }
+}

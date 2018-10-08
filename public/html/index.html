@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ua">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,111 +9,139 @@
 
   <link rel="stylesheet" href="../css/main.css">
 </head>
-<body>
-	<div class="wrapper">
-		<header>
+<body id="body">
+	<header class="header">
+		<div class="wrapper">
 			<div class="logo">
 				<img src="../img/logo.svg" alt="logo">
 			</div>
-			<div class="burger"></div>
-			<div class="menu">
-				<div class="close"></div>
+			<div class="hamburger" id="open"></div>
+			<div class="menu" id="menu">
+				<div class="close-button" id="close"></div>
 				<nav>
 					<ul class="nav">
-						<li>Головна</li>
-						<li>Дерматологія</li>
-						<li>Косметологія</li>
+						<li class="activ"><a href="index.html">Головна</a></li>
+						<li><a href="dermatology.html">Дерматологія</a></li>
+						<li><a href="cosmetology.html">Косметологія</a></li>
 					</ul>
 				</nav>
-				<div class="contact">
+				<div class="contacts">
 					<h5>Зв’яжіться зі мною<img src="../img/ic-arrow.svg" alt="icon"></h5>
-					<p>+38 050 885 19 79</p>
-					<p>iryna.smolanka@gmail.com</p>
+					<p class="phone">+38 050 885 19 79</p>
+					<p class="email">iryna.smolanka@gmail.com</p>
 					<ul class="social-network">
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
-						<li><a href="#"></a></li>
+						<li class="viber"><a href="#"></a></li>
+						<li class="facebook"><a href="#"></a></li>
+						<li class="instagram"><a href="#"></a></li>
 					</ul>
 				</div>
 			</div>
-		</header>
-		<main>
-			<div class="contact">
-				<p>+38 050 885 19 79</p>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="wrapper">
+
+			<div class="contacts">
+				<p class="phone">+38 050 885 19 79</p>
 				<ul class="social-network">
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
-					<li><a href="#"></a></li>
+					<li class="viber"><a href="#"></a></li>
+					<li class="facebook"><a href="#"></a></li>
+					<li class="instagram"><a href="#"></a></li>
 				</ul>
 			</div>
 
-			<section>
-				<h1>Ірина Смоланка</h1>
-				<h2>Дерматолог для всієї родини, лікар естетичної медицини</h2>
-				<img src="../img/img-03.jpg" alt="foto">
+			<section class="content content-with-img main-title">
+				<img src="../img/img-01@2x.jpg" alt="foto" class="image">
+				<div>
+					<h1>Ірина Смоланка</h1>
+					<h2>Дерматолог для всієї родини,<br> лікар естетичної медицини</h2>
+				</div>
 			</section>
 
-			<section>
-				<img src="../img/ic-goal.svg" alt="icon">
-				<h3>Моє професійне кредо</h3>
-				<ul>
-					<li>якісне консультування та лікування пацієнтів, основане виключно на доказовій медицині;</li>
-					<li>постійний розвиток та удосконалення професійних навичок;</li>
-					<li>регулярний моніторинг нової інформацїї в сфері дерматології та косметологїї.</li>
+			<section class="content">
+				<div class="head-section">
+					<img src="../img/ic-goal.svg" alt="icon">
+					<h3>Моє професійне кредо</h3>
+				</div>
+				<div class="content-text">
+					<ul>
+						<li>якісне консультування та лікування пацієнтів, основане виключно на доказовій медицині;</li>
+						<li>постійний розвиток та удосконалення професійних навичок;</li>
+						<li>регулярний моніторинг нової інформацїї в сфері дерматології та косметологїї.</li>
+					</ul>
+					<p>Для того, щоб слідкувати за останніми дослідженнями, тенденціями, розробками в області дерматології та косметології, я постійно відвідую Європейські, Всесвітні конференції та щорічно проходжу стажування в найкращих клініках Європи.</p>
+				</div>
+			</section>
+
+			<section class="content">
+				<div class="head-section">
+					<img src="../img/ic-education.svg" alt="icon">
+					<h3>Освіта</h3>
+				</div>
+				<div class="content-text">
+					<h4>2010</h4>
+					<p>Лікар, закінчила Ужгородський національний університет. Ужгород, Україна<br>
+					Диплом – АК № 39392415 від 18.06.2010р.
+					Спеціальність “Лікувальна справа”</p>
+					<h4>2012</h4>
+					<p>Спеціаліст, закінчила Ужгородський національний університет, факультет післядипломної освіти. Ужгород, Україна <br>
+					Сертифікат – № 679/12 від 30.01.2012р.
+					Спеціальність “Дерматовенерологія”</p>
+					<h4>2012</h4>
+					<p>Магістр медицини, закінчила Ужгородський національний університет. Ужгород, Україна<br>
+					Диплом – АК № 43701602 від 05.06.2012р.
+					Спеціальність “Лікувальна справа”</p>
+				</div>
+			</section>
+
+			<section class="content">
+				<div class="head-section">
+					<img src="../img/ic-work.svg" alt="icon">
+					<h3>Робота</h3>
+				</div>
+				<div class="content-text">
+					<h4>З вересня 2010</h4>
+					<p>Приватна практика лікаря-косметолога в косметологічному кабінеті «Світ косметології»</p>
+					<h4>2010–2012</h4>
+					<p>Лікар-інтерн за спеціальністю “Дерматовенерологія” в Обласному клінічному шкірно-венерологічному диспансері. Ужгород, Україна</p>
+					<h4>З травня 2012</h4>
+					<p>Лікар-дерматовенеролог в Обласному клінічному шкірно-венерологічному диспансері. Ужгород, Україна</p>
+					<h4>З жовтня 2014</h4>
+					<p>Асистент кафедри шкірних та венеричних хвороб в Ужгородському національному університеті. Ужгород, Україна</p>
+				</div>
+			</section>
+
+			<section class="content">
+				<div class="head-section">
+					<img src="../img/ic-advice.svg" alt="icon">
+					<h3>Консультація</h3>
+				</div>
+				<div class="content-text">
+					<p>Я з радістю відповім на всі Ваші запитання.<br>
+					Для запису на консультацію зателефонуйте <span>+38 050 885 19 79</span><br>
+					Чи пишіть на <span>iryna.smolanka@gmail.com </span></p>
+				</div>
+			</section>
+
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="contacts">
+				<h5>Зв’яжіться зі мною<img src="../img/ic-arrow.svg"></h5>
+				<ul class="social-network">
+					<li class="telephone"><a href="#"></a></li>
+					<li class="viber"><a href="#"></a></li>
+					<li class="facebook"><a href="#"></a></li>
+					<li class="instagram"><a href="#"></a></li>
 				</ul>
-				<p>Для того, щоб слідкувати за останніми дослідженнями, тенденціями, розробками в області дерматології та косметології, я постійно відвідую Європейські, Всесвітні конференції та щорічно проходжу стажування в найкращих клініках Європи.</p>				
-			</section>
-
-			<section>
-				<img src="../img/ic-education.svg" alt="icon">
-				<h3>Освіта</h3>
-				<h4>2010</h4>
-				<p>Лікар, закінчила Ужгородський національний університет. Ужгород, Україна<br>
-				Диплом – АК № 39392415 від 18.06.2010р.
-				Спеціальність “Лікувальна справа”</p>
-				<h4>2012</h4>
-				<p>Спеціаліст, закінчила Ужгородський національний університет, факультет післядипломної освіти. Ужгород, Україна <br>
-				Сертифікат – № 679/12 від 30.01.2012р.
-				Спеціальність “Дерматовенерологія”</p>
-				<h4>2012</h4>
-				<p>Магістр медицини, закінчила Ужгородський національний університет. Ужгород, Україна<br>
-				Диплом – АК № 43701602 від 05.06.2012р.
-				Спеціальність “Лікувальна справа”</p>				
-			</section>
-
-			<section>
-				<img src="../img/ic-work.svg" alt="icon">
-				<h3>Робота</h3>
-				<h4>З вересня 2010</h4>
-				<p>Приватна практика лікаря-косметолога в косметологічному кабінеті «Світ косметології»</p>
-				<h4>2010–2012</h4>
-				<p>Лікар-інтерн за спеціальністю “Дерматовенерологія” в Обласному клінічному шкірно-венерологічному диспансері. Ужгород, Україна</p>
-				<h4>З травня 2012</h4>
-				<p>Лікар-дерматовенеролог в Обласному клінічному шкірно-венерологічному диспансері. Ужгород, Україна</p>
-				<h4>З жовтня 2014</h4>
-				<p>Асистент кафедри шкірних та венеричних хвороб в Ужгородському національному університеті. Ужгород, Україна</p>
-			</section>
-
-			<section>
-				<img src="../img/ic-advice.svg" alt="icon">
-				<h3>Консультація</h3>
-				<p>Я з радістю відповім на всі Ваші запитання.<br>
-				Для запису на консультацію зателефонуйте <span>+38 050 885 19 79</span><br>
-				Чи пишіть на <span>iryna.smolanka@gmail.com </span></p>				
-			</section>
-		</main>
-	</div>
-
-		<footer>
-			<h5>Зв’яжіться зі мною<img src="../img/ic-arrow.svg"></h5>
-			<ul>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-			</ul>
-			<p>Copyright © 2018</p>
-			<p>Iryna Smolanka All Rights Reserved</p>
-		</footer>
+			</div>
+			<p><span>Copyright © 2018</span>
+			<span>Iryna Smolanka All Rights Reserved</span></p>
+		</div>
+	</footer>
+	<script type="text/javascript" src="../js/scripts.js"></script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+// Libs
+@import 'libs/normalize';
+
+// Utilities
+@import 'utilities/color';
+@import 'utilities/fonts_var';
+@import 'utilities/variables';
+
+// Base
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/typography';
+
+// General
+@import 'general/general';
+@import 'general/buttons';
+
+// Modules
+@import 'modules/header';
+@import 'modules/contacts';
+@import 'modules/content';
+@import 'modules/footer';
+
+// State
+@import 'state/state';

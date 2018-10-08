@@ -1,0 +1,133 @@
+.header {
+  height: 6rem;
+  padding: 1.5rem 0;
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -100vh;
+    height: 100vh;
+    padding: 10rem 5rem 4rem 6.3rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    transition: top 0.4s linear;
+
+    &.open {
+      top: 0;
+    }
+
+    .close-button {
+      position: absolute;
+      top: 2rem;
+      right: 1.1rem;
+      width: 2rem;
+      height: 2rem;
+      background-image: url(../img/ic-close.svg);
+      cursor: pointer;
+    }
+  }
+
+  .nav {
+    margin-top: 2rem;
+
+    li {
+      margin-bottom: 3rem;
+      padding-left: .9rem;
+      padding-top: .2rem;
+      text-transform: uppercase;
+    }
+  }
+
+  .activ {
+    border-left: .2rem solid $color-heading;
+
+    a {
+      color: $color-heading;
+    }
+  }
+}
+
+.hamburger {
+  width: 2.4rem;
+  height: 2.1rem;
+  background-image: url(../img/ic-hamburger.svg);
+  cursor: pointer;
+}
+
+@media (min-width: $medium-screen) {
+  .header {
+    .menu {
+      position: static;
+      height: auto;
+      padding: 0;
+    }
+
+    .nav {
+      margin: 0;
+      display: flex;
+
+      li {
+        position: relative;
+        margin: 0 0 0 2rem;
+        padding-left: 0;
+        letter-spacing: 1px;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: -.8rem;
+          left: 0;
+          width: 0;
+          height: .1rem;
+
+          background-color: $color-text;
+          transition: all 0.2s;
+        }
+
+        &:hover:after {
+          width: 100%;
+        }
+
+        &.activ:after {
+          width: 100%;
+          background-color: $color-heading;
+        }
+      }
+    }
+    
+    .activ {
+      border-left: none;
+    }
+
+    .close-button {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (min-width: $large-screen) {
+  .header {
+    margin-bottom: 3rem;
+
+    .wrapper {
+      width: 94rem;
+    }
+    .menu {
+      flex-direction: row;
+    }
+  }
+}
