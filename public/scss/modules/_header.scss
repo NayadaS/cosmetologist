@@ -19,6 +19,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    z-index: 1;
     transition: top 0.4s linear;
 
     &.open {

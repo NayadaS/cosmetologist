@@ -16,9 +16,14 @@ body {
   color: rgba($color-text, .7);
 }
 
+strong,
+b {
+  color: rgba($color-text, .9)
+}
+
 h1,
-h2,
-h3 {
+h3,
+h5 {
   font-family: $title-font-name, sans-serif;
 }
 
@@ -57,10 +62,10 @@ h3 {
 h4 {
   font: {
     size: 1.6rem;
-    weight: normal;
+    weight: bold;
   };
   line-height: 1.5;
-  color: rgba($color-text, .7);
+  color: rgba($color-text, .9);
 }
 
 h5 {

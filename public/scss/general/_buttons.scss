@@ -1,0 +1,50 @@
+button {
+  float: right;
+  width: 16rem;
+  height: 3rem;
+  border-radius: 2rem;
+  border: solid 1px $color-heading;
+  margin: .5rem 2rem 0;
+  background: $color-content-bg;
+  font-family: $title-font-name;
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: $color-heading;
+  transition: all .3s linear;
+
+  &:hover {
+    background: $color-heading;
+    color: $color-content-bg;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  button {
+    float: none;
+    position: absolute;
+    bottom: 0;
+    height: 4rem;
+    margin: .5rem 2rem 2rem;
+    transition: all .5s;
+  }
+
+  .left-button {
+    right: 23.6rem;
+  }
+
+  .right-button,
+  button.offset {
+    right: 0;
+  }
+}
+
+@media (min-width: $large-screen) {
+  .left-button {
+    right: 25.5rem;
+  }
+}

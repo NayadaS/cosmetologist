@@ -2,6 +2,13 @@
   margin: 0 0 2rem;
   border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    order: 1;
+    width: 100%;
+  }
 }
 
 h1 {
@@ -12,17 +19,7 @@ h2 {
   margin: 0 2rem 4rem;
 }
 
-.content-with-img {
-  display: flex;
-  flex-direction: column;
-
-  .image {
-    order: 1;
-    width: 100%;
-  }
-}
-
-.head-section {
+.heading-section {
   display: flex;
   align-items: start;
   margin: 2rem 2rem 1.5rem;
@@ -34,31 +31,111 @@ h2 {
 }
 
 .content-text {
-  margin: 0 2rem 2rem;
+  margin-bottom: 2rem;
   line-height: 1.5;
 
   ul {
-    margin: 0 0 1.5rem;
+    margin: 0 2rem 1.5rem;
     padding-left: 0;
     list-style-position: inside;
   }
 
   h4 {
-    margin: 1.5rem 0 0;
-    color: $color-heading;
+    margin: 1.5rem 2rem 0;
   }
 
   p {
-    margin: 0;
+    margin: 0 2rem;
   }
 
+  div {
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  h4:first-child {
+    margin-top: 0;
+  }
+}
+
+.content-home-page {
+  h4,
   span {
     color: $color-heading;
+  }
+
+  h4 {
+    font-weight: normal;
+  }
+}
+
+.content-dermatology,
+.content-cosmetology {
+  h3 {
+    margin: 2rem 2rem 1rem;
+  }
+}
+
+.video {
+  margin: 2rem 0 1rem;
+}
+
+.video {
+  height: 0;
+  position: relative;
+  padding-bottom: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.wrap-image {
+  position: relative;
+  order: 1;
+  height: 0;
+  overflow: hidden;
+
+  .image {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.content-dermatology {
+  .wrap-image {
+    padding-bottom: 100%;
+  }
+}
+
+.content-cosmetology {
+  .wrap-image {
+    padding-bottom: 93.333%;
+  }
+
+  .hidden {
+    .wrap-image {
+      display: none;
+    }
+  }
+
+  .without-indent {
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $small-screen) {
-  .content-with-img {
+  .content {
     display: block;
 
     .image {
@@ -97,6 +174,63 @@ h2 {
     font-size: 2rem;
     line-height: 1.4;
   }
+
+  .content-dermatology {
+    .wrap-image {
+      padding-bottom: 31rem;
+
+      .image {
+        width: 108.06%;
+      }
+    }
+  }
+
+  .content-cosmetology {
+    .wrap-image {
+      padding-bottom: 28rem;
+
+      .image {
+        width: auto;
+      }
+    }
+  }
+
+  .content-dermatology,
+  .content-cosmetology {
+    position: relative;
+
+    .wrap-image {
+      width: 23.6rem;
+      transition: all .5s;
+
+      .image {
+        margin: 0 -4.03%;
+      }
+    }
+
+    .fl-right {
+      float: right;
+      margin-left: 2rem;
+    }
+
+    .fl-left {
+      float: left;
+      margin-right: 2rem;
+    }
+
+    .hidden-content-open {
+      padding-bottom: 23.6rem;
+    }
+  }
+
+  .hidden {
+    padding-bottom: 4.5rem;
+  }
+
+   .visible-block {
+    max-height: 20rem;
+    overflow: hidden;
+   }
 }
 
 @media (min-width: $large-screen) {
@@ -116,22 +250,45 @@ h2 {
     line-height: 1.33;
   }
 
-  .head-section {
+  .heading-section {
     margin: 3rem 3rem 1.5rem;
   }
 
   .content-text {
     margin: 0 3rem 3rem;
   }
+
+  .content-dermatology,
+  .content-cosmetology {
+    .wrap-image {
+      width: 25.5rem;
+
+      .image {
+        // margin: 0;
+      }
+    }
+  }
+
+  .content-dermatology {
+    .wrap-image {
+      .image {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+
+  .content-img-left,
+  .content-img-right {
+    background-image: url(../img/lines.svg);
+    background-repeat: no-repeat;
+  }
+
+  .content-img-left {
+    background-position-x: 25.5rem;
+  }
+
+  .content-img-right {
+    background-position-x: 49.7rem;
+  }
 }
-
-
-// .hidden {
-//   height: 0;
-//   overflow: hidden;
-//   transition: height 0.9s linear;
-// }
-
-// .open-hidden-block {
-//   height: 30%;
-// }

@@ -23,18 +23,39 @@ window.onresize = function () {
   }
 }
 
+$('button').click(function() {
+  if ($(this).siblings(".hidden").is(':hidden')) {
 
+    $(this).siblings(".hidden").slideDown('slow','swing');
+    $(this).text('Показати менше');
 
-function showText(el) {
-  if (el.previousElementSibling.clientHeight === 0) {
-    
-    // el.parentNode.parentNode.parentNode.style.zIndex = 100;
-    // el.previousElementSibling.style.height = '100%';
-    el.previousElementSibling.classList.add("open-hidden-block");
-    el.innerHTML = 'Показати меньше';
+    if (window.innerWidth < 544) {
+      // setTimeout(function ('this') {
+        $(this).parent(".content-text").siblings(".wrap-image").slideUp('slow','swing');
+      // }, 400);
+    } else if (window.innerWidth > 767) {
+      $(this).parent(".content-text").siblings(".wrap-image").addClass('hidden-content-open');
+
+      if ($(this).hasClass('left-button')) {
+        $(this).addClass('offset');
+      }
+    }
+
   } else {
-    // el.previousElementSibling.style.height = '0';
-    el.previousElementSibling.classList.remove("open-hidden-block");
-    el.innerHTML = 'Дізнатись більше';
+
+    $(this).siblings(".hidden").slideUp('slow','swing');
+    $(this).text('Дізнатись більше');
+
+    if (window.innerWidth < 544) {
+      // setTimeout(function () {
+        $(this).parent(".content-text").siblings(".wrap-image").slideDown('slow','swing');
+      // }, 400);
+    } else if (window.innerWidth > 767) {
+      $(this).parent(".content-text").siblings(".wrap-image").removeClass('hidden-content-open');
+
+      if ($(this).hasClass('offset')) {
+        $(this).removeClass('offset');
+      }
+    }     
   }
-}
+});
