@@ -10,8 +10,14 @@
   }
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   background: $color-base-bg;
+  margin-bottom: 14.4rem;
 }
 
 a {
@@ -24,8 +30,14 @@ img {
 }
 
 footer {
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (min-width: $medium-screen) {
+  body {
+    margin-bottom: 4.8rem;
+  }
 }

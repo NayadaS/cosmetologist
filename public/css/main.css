@@ -378,8 +378,13 @@ th {
   *::before, *::after {
     box-sizing: border-box; }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
-  background: #e5ecf7; }
+  background: #e5ecf7;
+  margin-bottom: 14.4rem; }
 
 a {
   text-decoration: none; }
@@ -393,6 +398,10 @@ footer {
   left: 0;
   right: 0;
   bottom: 0; }
+
+@media (min-width: 768px) {
+  body {
+    margin-bottom: 4.8rem; } }
 
 html {
   font-size: 10px;
