@@ -388,6 +388,12 @@ img {
   height: auto;
   vertical-align: middle; }
 
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0; }
+
 html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
