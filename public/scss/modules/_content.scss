@@ -1,28 +1,30 @@
 .content {
   margin: 0 0 2rem;
+  padding: 2rem;
   border-radius: 1rem;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   .image {
     order: 1;
-    width: 100%;
+    width: calc(100% + 4rem);
+    margin: 0 -2rem -2rem;
   }
 }
 
 h1 {
-  margin: 4rem 2rem 1rem;
+  margin: 2rem 0 1rem;
 }
 
 h2 {
-  margin: 0 2rem 4rem;
+  margin: 0 0 4rem;
 }
 
 .heading-section {
   display: flex;
   align-items: start;
-  margin: 2rem 2rem 1.5rem;
+  margin-bottom: 1.5rem;
 
   h3 {
     margin: 0 0 0 1.5rem;
@@ -31,26 +33,25 @@ h2 {
 }
 
 .content-text {
-  margin-bottom: 2rem;
   line-height: 1.5;
 
   ul {
-    margin: 0 2rem 1.5rem;
+    margin: 0 0 1rem;
     padding-left: 0;
     list-style-position: inside;
   }
 
   h4 {
-    margin: 1.5rem 2rem 0;
+    margin: 1.5rem 0 0;
   }
 
   p {
-    margin: 0 2rem;
+    margin: 0;
   }
 
   div {
     p {
-      margin-bottom: 1.5rem;
+      margin-top: 1rem;
     }
   }
 
@@ -63,6 +64,7 @@ h2 {
   h4,
   span {
     color: $color-heading;
+    white-space: nowrap;
   }
 
   h4 {
@@ -73,18 +75,16 @@ h2 {
 .content-dermatology,
 .content-cosmetology {
   h3 {
-    margin: 2rem 2rem 1rem;
+    margin: 0;
   }
 }
 
 .video {
-  margin: 2rem 0 1rem;
-}
-
-.video {
   height: 0;
+  width: calc(100% + 4rem);
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: calc(56.25% + 2.25rem);
+  margin: 2rem -2rem 0;
 }
 
 .video iframe {
@@ -103,6 +103,7 @@ h2 {
   position: relative;
   order: 1;
   height: 0;
+  margin: 2rem -2rem -2rem;
   overflow: hidden;
 
   .image {
@@ -114,13 +115,13 @@ h2 {
 
 .content-dermatology {
   .wrap-image {
-    padding-bottom: 100%;
+    padding-bottom: calc(100% + 4rem);
   }
 }
 
 .content-cosmetology {
   .wrap-image {
-    padding-bottom: 93.333%;
+    padding-bottom: calc(93.333% + 3.7333rem);
   }
 
   .hidden {
@@ -130,7 +131,11 @@ h2 {
   }
 
   .without-indent {
-    margin-bottom: 0;
+    margin: 0;
+  }
+
+  .with-indent {
+    margin-top: 2rem;
   }
 }
 
@@ -139,7 +144,8 @@ h2 {
     display: block;
 
     .image {
-      width: 32.2%;
+      width: 34.42%;
+      margin: -2rem;
       height: auto;
       float: right;
     }
@@ -154,43 +160,51 @@ h2 {
   }
 
   h1 {
-    margin: 12% 2rem 3%;
+    margin: 9% 0 2%;
     font-size: 3.4rem;
   }
 
   h2 {
     font-size: 2rem;
-  }
-}
-
-@media (min-width: $medium-screen) {
-  h1 {
-    margin: 11.272% 0 2.415% 2rem;  // margin: 13% 0 2.415% 2rem; было бы лучше при ширине 1023px
-    font-size: 3.8rem;
-    line-height: 1.21;
+    margin: 0;
   }
 
-  h2 {
-    font-size: 2rem;
-    line-height: 1.4;
-  }
+  .visible-block {
+      max-height: 18rem;
+      overflow: hidden;
+    }
 
   .content-dermatology {
     .wrap-image {
-      padding-bottom: 31rem;
+      padding-bottom: 26.2rem;
 
       .image {
         width: 108.06%;
+        margin: 0 -4.03%;
       }
     }
   }
 
   .content-cosmetology {
+    .hidden {
+      .wrap-image {
+        display: block;
+        float: left;
+        margin: 3rem 2rem 1rem -2rem;
+        padding-bottom: 23.6rem;
+      }
+
+      h3 {
+        margin-top: 3rem;
+      }
+    }
+
     .wrap-image {
       padding-bottom: 28rem;
 
       .image {
-        width: auto;
+        width: 150%;
+        margin: 0 -17%;
       }
     }
   }
@@ -200,62 +214,111 @@ h2 {
     position: relative;
 
     .wrap-image {
-      width: 23.6rem;
+      width: 20rem;
       transition: all .5s;
 
-      .image {
-        margin: 0 -4.03%;
+      &.hidden-content-open {
+        padding-bottom: 23.6rem;
+        margin-bottom: 1rem;
       }
     }
 
     .fl-right {
       float: right;
-      margin-left: 2rem;
+      margin: -2rem -2rem -2rem 2rem;
     }
 
     .fl-left {
       float: left;
-      margin-right: 2rem;
-    }
-
-    .hidden-content-open {
-      padding-bottom: 23.6rem;
+      margin: -2rem 2rem -2rem -2rem;
     }
   }
 
   .hidden {
-    padding-bottom: 4.5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media (min-width: $medium-screen) {
+  h1 {
+    margin: 8.60% 0 2.58%;  // margin: 10% 0 4%; было бы лучше при ширине 1023px
+    font-size: 3.8rem;
+    line-height: 1.21;
   }
 
-   .visible-block {
-    max-height: 20rem;
-    overflow: hidden;
-   }
+  h2 {
+    line-height: 1.4;
+  }
+
+  .content-text {
+    ul {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .content-dermatology {
+    .wrap-image {
+      padding-bottom: 31rem;
+    }
+  }
+
+  .content-cosmetology {
+    .wrap-image {
+      padding-bottom: 28rem;
+
+      .image {
+        width: 127.3%;
+      }
+    }
+
+    .visible-block {
+      max-height: 16.5rem;
+    }
+  }
+
+  .content-dermatology,
+  .content-cosmetology {
+    .wrap-image {
+      width: 23.6rem;
+
+      .image {
+        margin: 0 -4.03%;
+      }
+    }
+  }
+
+  .hidden {
+    padding-bottom: 6rem;
+  }
+
+  .video {
+    width: 100%;
+    margin: 2rem 0 0;
+    padding-bottom: 56.25%;
+  }
 }
 
 @media (min-width: $large-screen) {
   .content {
     margin: 0 0 3rem;
+    padding: 3rem;
+
+    .image {
+      width: 25.5rem;
+      height: 35.5rem;
+      margin: -3rem;
+    }
   }
 
   h1 {
-    margin: 11rem 3rem 1.5rem;
+    margin: 8rem 0 1.5rem;
     font-size: 4.6rem;
     line-height: 1.17;
   }
 
   h2 {
-    margin: 0 3rem;
     font-size: 2.4rem;
     line-height: 1.33;
-  }
-
-  .heading-section {
-    margin: 3rem 3rem 1.5rem;
-  }
-
-  .content-text {
-    margin: 0 3rem 3rem;
   }
 
   .content-dermatology,
@@ -263,18 +326,58 @@ h2 {
     .wrap-image {
       width: 25.5rem;
 
-      .image {
-        // margin: 0;
+      &.hidden-content-open {
+        padding-bottom: 25.5rem;
       }
+
+      .image {
+        margin: 0;
+      }
+    }
+
+    .fl-right {
+      margin: -3rem -3rem -3rem 6.5rem;
+    }
+
+    .fl-left {
+      margin: -3rem 6.5rem -3rem -3rem;
     }
   }
 
   .content-dermatology {
     .wrap-image {
+      padding-bottom: 31rem;
+
       .image {
         width: 100%;
+        height: auto;
         margin: 0;
       }
+    }
+  }
+
+  .content-cosmetology {
+    .wrap-image {
+      padding-bottom: 28rem;
+
+      .image {
+        width: 117.65%;
+        height: auto;
+      }
+    }
+
+    .hidden {
+      .wrap-image {
+        margin: 3rem 6.5rem 1rem -3rem;
+        padding-bottom: 25.5rem;
+      }
+    }
+
+    .wrap-wrap-image {
+      float: left;
+      background-image: url(../img/lines.svg);
+      background-repeat: no-repeat;
+      background-position: 22.5rem 3rem;
     }
   }
 

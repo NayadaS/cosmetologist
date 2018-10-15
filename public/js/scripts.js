@@ -33,7 +33,7 @@ $('button').click(function() {
       // setTimeout(function ('this') {
         $(this).parent(".content-text").siblings(".wrap-image").slideUp('slow','swing');
       // }, 400);
-    } else if (window.innerWidth > 767) {
+    } else {
       $(this).parent(".content-text").siblings(".wrap-image").addClass('hidden-content-open');
 
       if ($(this).hasClass('left-button')) {
@@ -50,7 +50,7 @@ $('button').click(function() {
       // setTimeout(function () {
         $(this).parent(".content-text").siblings(".wrap-image").slideDown('slow','swing');
       // }, 400);
-    } else if (window.innerWidth > 767) {
+    } else {
       $(this).parent(".content-text").siblings(".wrap-image").removeClass('hidden-content-open');
 
       if ($(this).hasClass('offset')) {
