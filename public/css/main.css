@@ -374,7 +374,8 @@ th {
   src: local("Comfortaa Bold"), local("Comfortaa-Bold"), url("../fonts/comfortaa/comfortaa-bold.woff2") format("woff2"), url("../fonts/comfortaa/comfortaa-bold.woff") format("woff"); }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; }
   *::before, *::after {
     box-sizing: border-box; }
 
@@ -383,8 +384,11 @@ html {
   min-height: 100%; }
 
 body {
+  margin-bottom: 14.4rem;
   background: #e5ecf7;
-  margin-bottom: 14.4rem; }
+  background-image: url("../img/bg-lines.png");
+  background-size: 54.9rem;
+  background-position-y: 20rem; }
 
 a {
   text-decoration: none; }
@@ -401,7 +405,13 @@ footer {
 
 @media (min-width: 768px) {
   body {
-    margin-bottom: 4.8rem; } }
+    background-position-y: 6rem;
+    background-size: auto; } }
+
+@media (min-width: 1024px) {
+  body {
+    background-position-x: 4rem;
+    background-position-y: 0; } }
 
 html {
   font-size: 10px;
@@ -443,7 +453,7 @@ h2 {
 h3 {
   font-size: 2.4rem;
   font-weight: bold;
-  line-height: normal;
+  line-height: 1.33334;
   color: rgba(0, 71, 179, 0.9); }
 
 h4 {
@@ -456,13 +466,13 @@ h5 {
   font-size: 1.2rem;
   font-weight: normal;
   line-height: 1.5;
-  color: rgba(0, 20, 51, 0.9); }
+  color: #001433; }
 
 nav a {
   font-family: "Comfortaa", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
-  color: rgba(0, 20, 51, 0.9); }
+  color: rgba(0, 20, 51, 0.7); }
 
 @media (min-width: 768px) {
   nav a {
@@ -528,6 +538,17 @@ button {
   button:focus {
     outline: none; }
 
+.btn-up {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  right: calc(3.125% + 1rem);
+  bottom: 2rem;
+  display: none;
+  background-image: url(../img/btn-up.svg);
+  background-size: cover;
+  cursor: pointer; }
+
 @media (min-width: 544px) {
   button {
     float: none;
@@ -553,13 +574,62 @@ button {
     right: 23.6rem; }
   .right-button,
   button.offset {
-    right: 0; } }
+    right: 0; }
+  .btn-up {
+    right: calc(9.57% - 5rem);
+    bottom: 6.8rem; } }
 
 @media (min-width: 1024px) {
   button {
     margin: 0 3rem 3rem; }
   .left-button {
-    right: 29rem; } }
+    right: 29rem; }
+  .btn-up {
+    right: calc(50% - 45rem);
+    bottom: 7.8rem; } }
+
+.hamburger {
+  cursor: pointer;
+  z-index: 2;
+  transition: opacity, filter .15s linear; }
+  .hamburger-box {
+    position: relative;
+    width: 2.4rem;
+    height: 2rem; }
+  .hamburger-inner {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 2.4rem;
+    height: .2rem;
+    background-color: #0047b3;
+    transition: background-color 0s .13s linear; }
+    .hamburger-inner::before, .hamburger-inner::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: inherit;
+      height: inherit;
+      background-color: #0047b3;
+      transition: transform .15s ease; }
+    .hamburger-inner::before {
+      top: .9rem;
+      transition: top 0.1s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+    .hamburger-inner::after {
+      top: 1.8rem;
+      bottom: -1rem;
+      transition: top 0.2s 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1), transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  .hamburger.is-active .hamburger-inner {
+    background-color: transparent;
+    transition-delay: .22s; }
+    .hamburger.is-active .hamburger-inner::before, .hamburger.is-active .hamburger-inner::after {
+      top: -.4rem; }
+    .hamburger.is-active .hamburger-inner:before {
+      transform: translate3d(0, 1rem, 0) rotate(45deg);
+      transition: top 0.1s 0.15s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
+    .hamburger.is-active .hamburger-inner:after {
+      transform: translate3d(0, 1rem, 0) rotate(-45deg);
+      transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .header {
   height: 6rem;
@@ -570,27 +640,19 @@ button {
     align-items: center; }
   .header .menu {
     position: absolute;
-    left: 0;
-    right: 0;
-    top: -100vh;
+    left: -200vw;
+    top: 0;
     height: 100vh;
+    width: 100vw;
     padding: 10rem 5rem 4rem 6.3rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     z-index: 1;
-    transition: top 0.4s linear; }
+    transition: left 0.2s linear; }
     .header .menu.open {
-      top: 0; }
-    .header .menu .close-button {
-      position: absolute;
-      top: 2rem;
-      right: 1.1rem;
-      width: 2rem;
-      height: 2rem;
-      background-image: url(../img/ic-close.svg);
-      cursor: pointer; }
+      left: 0; }
   .header .nav {
     margin-top: 2rem; }
     .header .nav li {
@@ -603,16 +665,11 @@ button {
     .header .activ a {
       color: #0047b3; }
 
-.hamburger {
-  width: 2.4rem;
-  height: 2.1rem;
-  background-image: url(../img/ic-hamburger.svg);
-  cursor: pointer; }
-
 @media (min-width: 768px) {
   .header .menu {
     position: static;
     height: auto;
+    width: auto;
     padding: 0; }
   .header .nav {
     margin: 0;
@@ -646,11 +703,14 @@ button {
 
 @media (min-width: 1024px) {
   .header {
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    padding: 1rem 0; }
     .header .wrapper {
       width: 94rem; }
     .header .menu {
-      flex-direction: row; } }
+      flex-direction: row; }
+  .logo img {
+    height: 4rem; } }
 
 .social-network {
   margin-top: 2.5rem;
@@ -678,14 +738,17 @@ button {
 
 .phone {
   letter-spacing: -.07rem; }
+  .phone a {
+    color: rgba(0, 20, 51, 0.7); }
 
 .main .contacts {
   display: flex;
   justify-content: space-between; }
 
 .main .phone {
-  margin: 1.7rem 0 1.5rem;
-  color: #0047b3; }
+  margin: 1.7rem 0 1.5rem; }
+  .main .phone a {
+    color: #4c7eca; }
 
 .main .social-network {
   margin: 1.6rem 0; }
@@ -719,10 +782,12 @@ button {
     .header .social-network li {
       width: 1.6rem;
       height: 1.6rem;
-      margin: 0 0 0 1.5rem; }
+      margin: .2rem 0 0 1.5rem; }
   .header .phone {
-    margin: .2rem .4rem 0 7rem;
+    margin: .3rem .4rem 0 7rem;
     line-height: 1; }
+    .header .phone a {
+      color: #0047b3; }
   .main .contacts {
     display: none; } }
 
@@ -746,10 +811,10 @@ h2 {
 
 .heading-section {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 1.5rem; }
   .heading-section h3 {
-    margin: 0 0 0 1.5rem;
+    margin: .4rem 0 0 1.5rem;
     letter-spacing: -.01rem; }
 
 .content-text {
@@ -764,6 +829,8 @@ h2 {
     margin: 0; }
   .content-text div p {
     margin-top: 1rem; }
+  .content-text div ul {
+    margin: 0; }
   .content-text h4:first-child {
     margin-top: 0; }
 
@@ -777,7 +844,8 @@ h2 {
 
 .content-dermatology h3,
 .content-cosmetology h3 {
-  margin: 0; }
+  margin: 0;
+  letter-spacing: -0.2px; }
 
 .video {
   height: 0;
@@ -793,9 +861,6 @@ h2 {
   width: 100%;
   height: 100%; }
 
-.hidden {
-  display: none; }
-
 .wrap-image {
   position: relative;
   order: 1;
@@ -805,7 +870,18 @@ h2 {
   .wrap-image .image {
     position: absolute;
     left: 0;
-    top: 0; }
+    top: 0;
+    width: 100%;
+    margin: 0; }
+
+.more-info {
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s; }
+
+.block-open {
+  max-height: 300rem; }
 
 .content-dermatology .wrap-image {
   padding-bottom: calc(100% + 4rem); }
@@ -813,7 +889,7 @@ h2 {
 .content-cosmetology .wrap-image {
   padding-bottom: calc(93.333% + 3.7333rem); }
 
-.content-cosmetology .hidden .wrap-image {
+.content-cosmetology .more-info .wrap-image {
   display: none; }
 
 .content-cosmetology .without-indent {
@@ -841,19 +917,24 @@ h2 {
     font-size: 2rem;
     margin: 0; }
   .visible-block {
-    max-height: 18rem;
-    overflow: hidden; }
+    height: auto;
+    max-height: 19rem;
+    overflow: hidden;
+    transition: all .2s; }
   .content-dermatology .wrap-image {
     padding-bottom: 26.2rem; }
     .content-dermatology .wrap-image .image {
-      width: 108.06%;
-      margin: 0 -4.03%; }
-  .content-cosmetology .hidden .wrap-image {
+      width: 131.4%;
+      margin: 0 -15.5%; }
+  .content-cosmetology .more-info .wrap-image {
     display: block;
     float: left;
     margin: 3rem 2rem 1rem -2rem;
     padding-bottom: 23.6rem; }
-  .content-cosmetology .hidden h3 {
+    .content-cosmetology .more-info .wrap-image .image {
+      width: 118%;
+      margin: 0; }
+  .content-cosmetology .more-info h3 {
     margin-top: 3rem; }
   .content-cosmetology .wrap-image {
     padding-bottom: 28rem; }
@@ -879,7 +960,11 @@ h2 {
     .content-cosmetology .fl-left {
       float: left;
       margin: -2rem 2rem -2rem -2rem; }
-  .hidden {
+    .content-dermatology .content-text .visible-block-open,
+    .content-cosmetology .content-text .visible-block-open {
+      max-height: 50rem;
+      overflow: initial; }
+  .block-open {
     padding-bottom: 5rem; } }
 
 @media (min-width: 768px) {
@@ -896,21 +981,21 @@ h2 {
   .content-cosmetology .wrap-image {
     padding-bottom: 28rem; }
     .content-cosmetology .wrap-image .image {
-      width: 127.3%; }
+      width: 127.3%;
+      margin: 0 -12%; }
+  .content-cosmetology .more-info .wrap-image .image {
+    width: 100%; }
   .content-cosmetology .visible-block {
     max-height: 16.5rem; }
   .content-dermatology .wrap-image,
   .content-cosmetology .wrap-image {
     width: 23.6rem; }
-    .content-dermatology .wrap-image .image,
-    .content-cosmetology .wrap-image .image {
-      margin: 0 -4.03%; }
-  .hidden {
-    padding-bottom: 6rem; }
   .video {
     width: 100%;
     margin: 2rem 0 0;
-    padding-bottom: 56.25%; } }
+    padding-bottom: 56.25%; }
+  .block-open {
+    padding-bottom: 6rem; } }
 
 @media (min-width: 1024px) {
   .content {
@@ -945,15 +1030,16 @@ h2 {
   .content-dermatology .wrap-image {
     padding-bottom: 31rem; }
     .content-dermatology .wrap-image .image {
-      width: 100%;
+      width: 121.57%;
       height: auto;
-      margin: 0; }
+      margin: 0 -10.775%; }
   .content-cosmetology .wrap-image {
     padding-bottom: 28rem; }
     .content-cosmetology .wrap-image .image {
       width: 117.65%;
-      height: auto; }
-  .content-cosmetology .hidden .wrap-image {
+      height: auto;
+      margin: 0 -8.825%; }
+  .content-cosmetology .more-info .wrap-image {
     margin: 3rem 6.5rem 1rem -3rem;
     padding-bottom: 25.5rem; }
   .content-cosmetology .wrap-wrap-image {

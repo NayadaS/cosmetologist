@@ -3,6 +3,7 @@
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 
   &::before,
   &::after {
@@ -16,8 +17,11 @@ html {
 }
 
 body {
-  background: $color-base-bg;
   margin-bottom: 14.4rem;
+  background: $color-base-bg;
+  background-image: url('../img/bg-lines.png');
+  background-size: 54.9rem;
+  background-position-y: 20rem;
 }
 
 a {
@@ -38,6 +42,14 @@ footer {
 
 @media (min-width: $medium-screen) {
   body {
-    margin-bottom: 4.8rem;
+    background-position-y: 6rem;
+    background-size: auto;
+  }
+}
+
+@media (min-width: $large-screen) {
+  body {
+    background-position-x: 4rem;
+    background-position-y: 0;
   }
 }

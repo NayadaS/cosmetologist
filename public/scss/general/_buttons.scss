@@ -23,6 +23,18 @@ button {
   }
 }
 
+.btn-up {
+  width: 3rem;
+  height: 3rem;
+  position: fixed;
+  right: calc(3.125% + 1rem);
+  bottom: 2rem;
+  display: none;
+  background-image: url(../img/btn-up.svg);
+  background-size: cover;
+  cursor: pointer;
+}
+
 @media (min-width: $small-screen) {
   button {
     float: none;
@@ -60,6 +72,11 @@ button {
   button.offset {
     right: 0;
   }
+
+  .btn-up {
+    right: calc(9.57% - 5rem);
+    bottom: 6.8rem;
+  }
 }
 
 @media (min-width: $large-screen) {
@@ -69,5 +86,10 @@ button {
 
   .left-button {
     right: 29rem;
+  }
+
+  .btn-up {
+    right: calc(50% - 45rem);
+    bottom: 7.8rem;
   }
 }

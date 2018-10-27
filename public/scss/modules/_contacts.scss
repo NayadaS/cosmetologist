@@ -34,6 +34,10 @@
 
 .phone {
   letter-spacing: -.07rem;
+
+  a {
+    color: rgba($color-text, .7);
+  }
 }
 
 .main {
@@ -44,7 +48,10 @@
 
   .phone {
     margin: 1.7rem 0 1.5rem;
-    color: $color-heading;
+
+    a {
+      color: $color-main-contacts;
+    }
   }
 
   .social-network {
@@ -106,13 +113,17 @@
       li {
         width: 1.6rem;
         height: 1.6rem;
-        margin: 0 0 0 1.5rem;
+        margin: .2rem 0 0 1.5rem;
       }
     }
 
     .phone {
-      margin: .2rem .4rem 0 7rem;
+      margin: .3rem .4rem 0 7rem;
       line-height: 1;
+
+      a {
+        color: $color-heading;
+      }
     }
   }
 

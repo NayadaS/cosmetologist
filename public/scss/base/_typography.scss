@@ -55,7 +55,7 @@ h3 {
     size: 2.4rem;
     weight: bold;
   };
-  line-height: normal;
+  line-height: 1.33334;
   color: rgba($color-heading, .9);
 }
 
@@ -74,7 +74,7 @@ h5 {
     weight: normal;
   };
   line-height: 1.5;
-  color: rgba($color-text, .9);
+  color: $color-text;
 }
 
 nav {
@@ -84,7 +84,7 @@ nav {
       size: 1.6rem;
     };
     line-height: 1.5;
-    color: rgba($color-text, .9);
+    color: rgba($color-text, .7);
   }
 }
 

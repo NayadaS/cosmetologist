@@ -1,24 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200" viewBox="0 0 200 200">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="610" height="460" viewBox="0 0 610 460">
     <defs>
         <path id="a" d="M0 0h200v200H0z"/>
+        <path id="c" d="M0 0h200v200H0z"/>
     </defs>
     <g fill="none" fill-rule="evenodd" opacity=".5">
-        <mask id="b" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <path fill="#FFF" d="M489.744-96.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 653.744)"/>
-        <path fill="#FFF" d="M459.744-96.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 461.744 653.744)"/>
-        <path fill="#FFF" d="M490.004-126h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 624)"/>
-        <path fill="#FFF" d="M490.004-157.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 592.744)"/>
-        <path fill="#FFF" d="M490.004-187.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 562.744)"/>
-        <path fill="#FFF" d="M490-217h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492 533)"/>
-        <path fill="#FFF" d="M490.004-247h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 503)"/>
-        <path fill="#FFF" d="M489.744-278.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 471.744)"/>
-        <path fill="#FFF" d="M489.744-338.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 411.744)"/>
-        <path fill="#FFF" d="M489.744-398.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 351.744)"/>
-        <path fill="#FFF" d="M489.744-308.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 441.744)"/>
-        <path fill="#FFF" d="M489.744-368.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 381.744)"/>
-        <path fill="#FFF" d="M489.744-428.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 321.744)"/>
-        <path fill="#FFF" d="M489.744-457.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 292.744)"/>
+        <g transform="translate(300 230)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path fill="#FFF" d="M489.744-96.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 653.744)"/>
+            <path fill="#FFF" d="M459.744-96.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 461.744 653.744)"/>
+            <path fill="#FFF" d="M490.004-126h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 624)"/>
+            <path fill="#FFF" d="M490.004-157.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 592.744)"/>
+            <path fill="#FFF" d="M490.004-187.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 562.744)"/>
+            <path fill="#FFF" d="M490-217h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492 533)"/>
+            <path fill="#FFF" d="M490.004-247h4v1500h-4z" mask="url(#b)" transform="rotate(-45 492.004 503)"/>
+            <path fill="#FFF" d="M489.744-278.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 471.744)"/>
+            <path fill="#FFF" d="M489.744-338.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 411.744)"/>
+            <path fill="#FFF" d="M489.744-398.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 351.744)"/>
+            <path fill="#FFF" d="M489.744-308.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 441.744)"/>
+            <path fill="#FFF" d="M489.744-368.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 381.744)"/>
+            <path fill="#FFF" d="M489.744-428.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 321.744)"/>
+            <path fill="#FFF" d="M489.744-457.256h4v1500h-4z" mask="url(#b)" transform="rotate(-45 491.744 292.744)"/>
+        </g>
+        <g>
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <path fill="#FFF" d="M489.744-96.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 653.744)"/>
+            <path fill="#FFF" d="M459.744-96.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 461.744 653.744)"/>
+            <path fill="#FFF" d="M490.004-126h4v1500h-4z" mask="url(#d)" transform="rotate(-45 492.004 624)"/>
+            <path fill="#FFF" d="M490.004-157.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 492.004 592.744)"/>
+            <path fill="#FFF" d="M490.004-187.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 492.004 562.744)"/>
+            <path fill="#FFF" d="M490-217h4v1500h-4z" mask="url(#d)" transform="rotate(-45 492 533)"/>
+            <path fill="#FFF" d="M490.004-247h4v1500h-4z" mask="url(#d)" transform="rotate(-45 492.004 503)"/>
+            <path fill="#FFF" d="M489.744-278.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 471.744)"/>
+            <path fill="#FFF" d="M489.744-338.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 411.744)"/>
+            <path fill="#FFF" d="M489.744-398.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 351.744)"/>
+            <path fill="#FFF" d="M489.744-308.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 441.744)"/>
+            <path fill="#FFF" d="M489.744-368.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 381.744)"/>
+            <path fill="#FFF" d="M489.744-428.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 321.744)"/>
+            <path fill="#FFF" d="M489.744-457.256h4v1500h-4z" mask="url(#d)" transform="rotate(-45 491.744 292.744)"/>
+        </g>
     </g>
 </svg>

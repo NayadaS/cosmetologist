@@ -23,11 +23,11 @@ h2 {
 
 .heading-section {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 1.5rem;
 
   h3 {
-    margin: 0 0 0 1.5rem;
+    margin: .4rem 0 0 1.5rem;
     letter-spacing: -.01rem;
   }
 }
@@ -53,6 +53,10 @@ h2 {
     p {
       margin-top: 1rem;
     }
+
+    ul {
+      margin: 0;
+    }
   }
 
   h4:first-child {
@@ -76,6 +80,7 @@ h2 {
 .content-cosmetology {
   h3 {
     margin: 0;
+    letter-spacing: -0.2px;
   }
 }
 
@@ -95,10 +100,6 @@ h2 {
   height: 100%;
 }
 
-.hidden {
-  display: none;
-}
-
 .wrap-image {
   position: relative;
   order: 1;
@@ -110,7 +111,20 @@ h2 {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    margin: 0;
   }
+}
+
+.more-info {
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  transition: all .5s;
+}
+
+.block-open {
+  max-height: 300rem;
 }
 
 .content-dermatology {
@@ -124,7 +138,7 @@ h2 {
     padding-bottom: calc(93.333% + 3.7333rem);
   }
 
-  .hidden {
+  .more-info {
     .wrap-image {
       display: none;
     }
@@ -170,28 +184,35 @@ h2 {
   }
 
   .visible-block {
-      max-height: 18rem;
-      overflow: hidden;
-    }
+    height: auto;
+    max-height: 19rem;
+    overflow: hidden;
+    transition: all .2s;
+  }
 
   .content-dermatology {
     .wrap-image {
       padding-bottom: 26.2rem;
 
       .image {
-        width: 108.06%;
-        margin: 0 -4.03%;
+        width: 131.4%;
+        margin: 0 -15.5%;
       }
     }
   }
 
   .content-cosmetology {
-    .hidden {
+    .more-info {
       .wrap-image {
         display: block;
         float: left;
         margin: 3rem 2rem 1rem -2rem;
         padding-bottom: 23.6rem;
+
+        .image {
+          width: 118%;
+          margin: 0;
+        }
       }
 
       h3 {
@@ -232,9 +253,16 @@ h2 {
       float: left;
       margin: -2rem 2rem -2rem -2rem;
     }
+
+    .content-text {
+      .visible-block-open {
+        max-height: 50rem;
+        overflow: initial;
+      }
+    }
   }
 
-  .hidden {
+  .block-open {
     padding-bottom: 5rem;
   }
 }
@@ -268,6 +296,15 @@ h2 {
 
       .image {
         width: 127.3%;
+        margin: 0 -12%;
+      }
+    }
+
+    .more-info {
+      .wrap-image {
+        .image {
+          width: 100%;
+        }
       }
     }
 
@@ -280,21 +317,17 @@ h2 {
   .content-cosmetology {
     .wrap-image {
       width: 23.6rem;
-
-      .image {
-        margin: 0 -4.03%;
-      }
     }
-  }
-
-  .hidden {
-    padding-bottom: 6rem;
   }
 
   .video {
     width: 100%;
     margin: 2rem 0 0;
     padding-bottom: 56.25%;
+  }
+
+  .block-open {
+    padding-bottom: 6rem;
   }
 }
 
@@ -349,9 +382,9 @@ h2 {
       padding-bottom: 31rem;
 
       .image {
-        width: 100%;
+        width: 121.57%;
         height: auto;
-        margin: 0;
+        margin: 0 -10.775%;
       }
     }
   }
@@ -363,10 +396,11 @@ h2 {
       .image {
         width: 117.65%;
         height: auto;
+        margin: 0 -8.825%;
       }
     }
 
-    .hidden {
+    .more-info {
       .wrap-image {
         margin: 3rem 6.5rem 1rem -3rem;
         padding-bottom: 25.5rem;
