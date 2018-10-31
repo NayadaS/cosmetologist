@@ -18,10 +18,12 @@ html {
 
 body {
   margin-bottom: 14.4rem;
-  background: $color-base-bg;
-  background-image: url('../img/bg-lines.png');
-  background-size: 54.9rem;
-  background-position-y: 20rem;
+  background: {
+    color: $color-base-bg;
+    image: url('../img/bg-lines.png');
+    size: 54.9rem;
+    position-y: 20rem;
+  };
 }
 
 a {
@@ -42,6 +44,7 @@ footer {
 
 @media (min-width: $medium-screen) {
   body {
+    margin-bottom: 4.8rem;
     background-position-y: 6rem;
     background-size: auto;
   }

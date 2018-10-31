@@ -66,7 +66,7 @@ h2 {
 
 .content-home-page {
   h4,
-  span {
+  a {
     color: $color-heading;
     white-space: nowrap;
   }
@@ -123,7 +123,7 @@ h2 {
   transition: all .5s;
 }
 
-.block-open {
+.blockOpen {
   max-height: 300rem;
 }
 
@@ -187,7 +187,15 @@ h2 {
     height: auto;
     max-height: 19rem;
     overflow: hidden;
-    transition: all .2s;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    transition: all .2s linear;
+
+    &.long-title {
+      -webkit-line-clamp: 5;
+    }
   }
 
   .content-dermatology {
@@ -236,9 +244,9 @@ h2 {
 
     .wrap-image {
       width: 20rem;
-      transition: all .5s;
+      transition: all .5s linear;
 
-      &.hidden-content-open {
+      &.hiddenContentOpen {
         padding-bottom: 23.6rem;
         margin-bottom: 1rem;
       }
@@ -255,14 +263,15 @@ h2 {
     }
 
     .content-text {
-      .visible-block-open {
+      .visibleBlockOpen {
         max-height: 50rem;
         overflow: initial;
+        display: block;
       }
     }
   }
 
-  .block-open {
+  .blockOpen {
     padding-bottom: 5rem;
   }
 }
@@ -326,7 +335,7 @@ h2 {
     padding-bottom: 56.25%;
   }
 
-  .block-open {
+  .blockOpen {
     padding-bottom: 6rem;
   }
 }
@@ -359,7 +368,7 @@ h2 {
     .wrap-image {
       width: 25.5rem;
 
-      &.hidden-content-open {
+      &.hiddenContentOpen {
         padding-bottom: 25.5rem;
       }
 

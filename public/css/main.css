@@ -385,7 +385,7 @@ html {
 
 body {
   margin-bottom: 14.4rem;
-  background: #e5ecf7;
+  background-color: #e5ecf7;
   background-image: url("../img/bg-lines.png");
   background-size: 54.9rem;
   background-position-y: 20rem; }
@@ -405,6 +405,7 @@ footer {
 
 @media (min-width: 768px) {
   body {
+    margin-bottom: 4.8rem;
     background-position-y: 6rem;
     background-size: auto; } }
 
@@ -736,9 +737,11 @@ button {
 .contacts img {
   margin-left: .8rem; }
 
-.phone {
+.phone,
+.email {
   letter-spacing: -.07rem; }
-  .phone a {
+  .phone a,
+  .email a {
     color: rgba(0, 20, 51, 0.7); }
 
 .main .contacts {
@@ -835,7 +838,7 @@ h2 {
     margin-top: 0; }
 
 .content-home-page h4,
-.content-home-page span {
+.content-home-page a {
   color: #0047b3;
   white-space: nowrap; }
 
@@ -880,7 +883,7 @@ h2 {
   overflow: hidden;
   transition: all .5s; }
 
-.block-open {
+.blockOpen {
   max-height: 300rem; }
 
 .content-dermatology .wrap-image {
@@ -920,7 +923,13 @@ h2 {
     height: auto;
     max-height: 19rem;
     overflow: hidden;
-    transition: all .2s; }
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    transition: all .2s linear; }
+    .visible-block.long-title {
+      -webkit-line-clamp: 5; }
   .content-dermatology .wrap-image {
     padding-bottom: 26.2rem; }
     .content-dermatology .wrap-image .image {
@@ -947,9 +956,9 @@ h2 {
     .content-dermatology .wrap-image,
     .content-cosmetology .wrap-image {
       width: 20rem;
-      transition: all .5s; }
-      .content-dermatology .wrap-image.hidden-content-open,
-      .content-cosmetology .wrap-image.hidden-content-open {
+      transition: all .5s linear; }
+      .content-dermatology .wrap-image.hiddenContentOpen,
+      .content-cosmetology .wrap-image.hiddenContentOpen {
         padding-bottom: 23.6rem;
         margin-bottom: 1rem; }
     .content-dermatology .fl-right,
@@ -960,11 +969,12 @@ h2 {
     .content-cosmetology .fl-left {
       float: left;
       margin: -2rem 2rem -2rem -2rem; }
-    .content-dermatology .content-text .visible-block-open,
-    .content-cosmetology .content-text .visible-block-open {
+    .content-dermatology .content-text .visibleBlockOpen,
+    .content-cosmetology .content-text .visibleBlockOpen {
       max-height: 50rem;
-      overflow: initial; }
-  .block-open {
+      overflow: initial;
+      display: block; }
+  .blockOpen {
     padding-bottom: 5rem; } }
 
 @media (min-width: 768px) {
@@ -994,7 +1004,7 @@ h2 {
     width: 100%;
     margin: 2rem 0 0;
     padding-bottom: 56.25%; }
-  .block-open {
+  .blockOpen {
     padding-bottom: 6rem; } }
 
 @media (min-width: 1024px) {
@@ -1015,8 +1025,8 @@ h2 {
   .content-dermatology .wrap-image,
   .content-cosmetology .wrap-image {
     width: 25.5rem; }
-    .content-dermatology .wrap-image.hidden-content-open,
-    .content-cosmetology .wrap-image.hidden-content-open {
+    .content-dermatology .wrap-image.hiddenContentOpen,
+    .content-cosmetology .wrap-image.hiddenContentOpen {
       padding-bottom: 25.5rem; }
     .content-dermatology .wrap-image .image,
     .content-cosmetology .wrap-image .image {

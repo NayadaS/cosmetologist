@@ -1,5 +1,6 @@
 # Read mere about ignoring files https://git-scm.com/docs/gitignore
 .git/
+.idea/
 
 
 # Dependencies:
@@ -7,3 +8,7 @@
 
 .sass-cache/
 public/css/*.css.map
+
+.scss-lint.yml
+.stylelintrc
+package-lock.json
