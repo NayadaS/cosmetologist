@@ -9,10 +9,10 @@
 
   p {
     margin: 0;
+    color: $color-text;
     font-family: $title-font-name;
     font-size: 1.2rem;
     line-height: 1.5;
-    color: $color-text;
 
     span {
       display: block;
@@ -23,16 +23,16 @@
 @media (min-width: $medium-screen) {
   .footer {
     .wrapper {
-      width: auto;
-      margin: 0 1.3% 0;
-      padding: 1.5rem 0;
       display: flex;
       justify-content: space-between;
+      width: auto;
+      margin: 0 1.3%;
+      padding: 1.5rem 0;
     }
 
     .contacts {
-      order: 1;
       display: flex;
+      order: 1;
 
       h5 {
         margin: 0;

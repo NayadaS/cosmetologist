@@ -2,15 +2,15 @@ button {
   float: right;
   width: 16rem;
   height: 3rem;
-  border-radius: 2rem;
-  border: solid 1px $color-heading;
   margin: 2rem 0 0;
+  border: solid 1px $color-heading;
+  border-radius: 2rem;
   background: $color-content-bg;
+  color: $color-heading;
   font-family: $title-font-name;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.5;
-  color: $color-heading;
   transition: all .3s linear;
 
   &:hover {
@@ -24,22 +24,22 @@ button {
 }
 
 .btn-up {
-  width: 3rem;
-  height: 3rem;
   position: fixed;
+  display: none;
   right: calc(3.125% + 1rem);
   bottom: 2rem;
-  display: none;
-  background-image: url(../img/btn-up.svg);
+  width: 3rem;
+  height: 3rem;
+  background-image: url('../img/btn-up.svg');
   background-size: cover;
   cursor: pointer;
 }
 
 @media (min-width: $small-screen) {
   button {
-    float: none;
     position: absolute;
     bottom: 0;
+    float: none;
     margin: 0 2rem 2rem;
     transition: all .5s;
   }
@@ -49,16 +49,16 @@ button {
   }
 
   .right-button,
-  button.offset {
+  .left-button.offset {
     right: 0;
   }
 }
 
 @media (min-width: $medium-screen) {
   button {
-    float: none;
     position: absolute;
     bottom: 0;
+    float: none;
     height: 4rem;
     margin: 0 2rem 2rem;
     transition: all .5s;
@@ -69,7 +69,7 @@ button {
   }
 
   .right-button,
-  button.offset {
+  .left-button.offset {
     right: 0;
   }
 

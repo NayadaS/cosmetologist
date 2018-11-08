@@ -4,23 +4,23 @@
 
   .wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
 
   .menu {
     position: absolute;
-    left: -200vw;
-    top: 0;
-    height: 100vh;
-    width: 100vw;
-    padding: 10rem 5rem 4rem 6.3rem;
     display: flex;
+    top: 0;
+    left: -200vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    padding: 10rem 5rem 4rem 6.3rem;
+    transition: left .2s linear;
     z-index: 1;
-    transition: left 0.2s linear;
 
     &.open {
       left: 0;
@@ -32,8 +32,8 @@
 
     li {
       margin-bottom: 3rem;
-      padding-left: .9rem;
       padding-top: .2rem;
+      padding-left: .9rem;
       text-transform: uppercase;
     }
   }
@@ -51,14 +51,14 @@
   .header {
     .menu {
       position: static;
-      height: auto;
       width: auto;
+      height: auto;
       padding: 0;
     }
 
     .nav {
-      margin: 0;
       display: flex;
+      margin: 0;
 
       li {
         position: relative;
@@ -66,24 +66,23 @@
         padding-left: 0;
         letter-spacing: 1px;
 
-        &:after {
+        &::after {
+          position: absolute;
           content: '';
           display: block;
-          position: absolute;
-          bottom: -.8rem;
           left: 0;
+          bottom: -.8rem;
           width: 0;
           height: .1rem;
-
           background-color: $color-text;
-          transition: all 0.2s;
+          transition: all .2s;
         }
 
-        &:hover:after {
+        &:hover::after {
           width: 100%;
         }
 
-        &.activ:after {
+        &.activ::after {
           width: 100%;
           background-color: $color-heading;
         }
@@ -91,7 +90,7 @@
     }
     
     .activ {
-      border-left: none;
+      border-left: 0;
     }
 
     .close-button {
@@ -112,6 +111,7 @@
     .wrapper {
       width: 94rem;
     }
+    
     .menu {
       flex-direction: row;
     }

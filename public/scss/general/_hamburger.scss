@@ -1,7 +1,7 @@
 .hamburger {
   cursor: pointer;
-  z-index: 2;
   transition: opacity, filter .15s linear;
+  z-index: 2;
 
   &-box {
     position: relative;
@@ -53,12 +53,12 @@
         top: -.4rem;
       }
 
-      &:before {
+      &::before {
         transform: translate3d(0, 1rem, 0) rotate(45deg);
         transition: top .1s .15s cubic-bezier(.33333, 0, .66667, .33333), transform .13s .22s cubic-bezier(.215, .61, .355, 1);
       }
 
-      &:after {
+      &::after {
         transform: translate3d(0, 1rem, 0) rotate(-45deg);
         transition: top .2s cubic-bezier(.33333, 0, .66667, .33333), transform .13s .22s cubic-bezier(.215, .61, .355, 1);
       }

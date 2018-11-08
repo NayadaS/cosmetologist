@@ -40,12 +40,12 @@ function elOpen($el) {
       if ($el.find('button').hasClass('left-button')) {
         $el.find('button').addClass('offset');
       }
-    }, 600);  
+    }, 450);  
   }
 
   setTimeout(function () {
     $el.find('button').text('Показати менше').css('display', 'block');
-  }, 1000);
+  }, 500);
 }
 
 function elClose($el) {

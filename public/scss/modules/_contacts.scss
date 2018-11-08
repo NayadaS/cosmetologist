@@ -1,29 +1,29 @@
 .social-network {
-  margin-top: 2.5rem;
   display: flex;
+  margin-top: 2.5rem;
 
   li {
-    height: 3rem;
     width: 3rem;
+    height: 3rem;
     margin-right: 3.9rem;
     background-size: cover;
   }
 }
 
 .viber {
-  background-image: url(../img/ic-viber.svg);
+  background-image: url('../img/ic-viber.svg');
 }
 
 .facebook {
-  background-image: url(../img/ic-facebook.svg);
+  background-image: url('../img/ic-facebook.svg');
 }
 
 .instagram {
-  background-image: url(../img/ic-instagram.svg);
+  background-image: url('../img/ic-instagram.svg');
 }
 
 .telephone {
-  background-image: url(../img/ic-phone.svg);
+  background-image: url('../img/ic-phone.svg');
 }
 
 .contacts {
@@ -59,8 +59,8 @@
     margin: 1.6rem 0;
 
     li {
-      height: 1.8rem;
       width: 1.8rem;
+      height: 1.8rem;
       margin: 0 0 0 3rem;
     }
   }
@@ -68,11 +68,11 @@
 
 .footer {
   .social-network {
-    margin: 0 0 1.5rem;
     justify-content: center;
+    margin: 0 0 1.5rem;
 
     li {
-      margin: 0 1.2rem 0;
+      margin: 0 1.2rem;
     }
   }
 }
