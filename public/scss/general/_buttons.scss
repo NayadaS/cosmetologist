@@ -13,11 +13,6 @@ button {
   line-height: 1.5;
   transition: all .3s linear;
 
-  &:hover {
-    background: $color-heading;
-    color: $color-content-bg;
-  }
-
   &:focus {
     outline: none;
   }
@@ -82,6 +77,11 @@ button {
 @media (min-width: $large-screen) {
   button {
     margin: 0 3rem 3rem;
+
+    &:hover {
+      background: $color-heading;
+      color: $color-content-bg;
+    }
   }
 
   .left-button {

@@ -12,3 +12,5 @@ public/css/*.css.map
 .scss-lint.yml
 .stylelintrc
 package-lock.json
+
+/public-min

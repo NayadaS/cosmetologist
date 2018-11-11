@@ -482,15 +482,22 @@ nav a {
 html {
   position: relative;
   min-height: 100%; }
-  html body {
-    height: 100%;
-    min-height: .1rem; }
-    html body.menu-open {
-      overflow: hidden; }
+
+body {
+  height: 100%;
+  min-height: .1rem;
+  padding-top: 6rem; }
+  body.menu-open {
+    overflow: hidden; }
 
 .wrapper {
   width: 93.75%;
   margin: 0 auto; }
+
+.hidden-title {
+  margin: 0;
+  color: transparent;
+  font-size: 0; }
 
 .overflow-hidden {
   overflow: hidden; }
@@ -516,6 +523,8 @@ html {
     width: 80.86%; } }
 
 @media (min-width: 1024px) {
+  body {
+    padding-top: 9rem; }
   .main .wrapper {
     width: 78rem; } }
 
@@ -533,9 +542,6 @@ button {
   font-weight: bold;
   line-height: 1.5;
   transition: all .3s linear; }
-  button:hover {
-    background: #0047b3;
-    color: #fff; }
   button:focus {
     outline: none; }
 
@@ -583,6 +589,9 @@ button {
 @media (min-width: 1024px) {
   button {
     margin: 0 3rem 3rem; }
+    button:hover {
+      background: #0047b3;
+      color: #fff; }
   .left-button {
     right: 29rem; }
   .btn-up {
@@ -633,8 +642,14 @@ button {
       transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), transform 0.13s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1); }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 6rem;
-  padding: 1.5rem 0; }
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(20, 22, 34, 0.08);
+  z-index: 10; }
   .header .wrapper {
     display: flex;
     align-items: center;
@@ -643,17 +658,17 @@ button {
     position: absolute;
     display: flex;
     top: 0;
-    left: -200vw;
+    right: -200vw;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100vw;
     height: 100vh;
     padding: 10rem 5rem 4rem 6.3rem;
-    transition: left .2s linear;
+    transition: right .2s linear;
     z-index: 1; }
     .header .menu.open {
-      left: 0; }
+      right: 0; }
   .header .nav {
     margin-top: 2rem; }
     .header .nav li {
@@ -704,7 +719,6 @@ button {
 
 @media (min-width: 1024px) {
   .header {
-    margin-bottom: 3rem;
     padding: 1rem 0; }
     .header .wrapper {
       width: 94rem; }

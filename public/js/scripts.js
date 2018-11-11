@@ -1,4 +1,3 @@
-
 // ----- Header navigation -----
 
 var $body = $('body');
@@ -40,16 +39,21 @@ function elOpen($el) {
       if ($el.find('button').hasClass('left-button')) {
         $el.find('button').addClass('offset');
       }
-    }, 450);  
+    }, 600);  
   }
 
   setTimeout(function () {
     $el.find('button').text('Показати менше').css('display', 'block');
-  }, 500);
+  }, 1000);
 }
 
 function elClose($el) {
   $el.find('button').css('display', 'none');
+      
+  var myVideo = $el.find('.video');
+  for (var i = 0; i < myVideo.length; i++) {
+  	myVideo.children("iframe")[i].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+  }  
 
   if (window.innerWidth < 544) {
       $el.find('.wrap-image').slideDown('slow','swing');
@@ -77,28 +81,16 @@ $('button').click(function() {
   var $topMargin;
 
   if (window.innerWidth < 1024) {
-    $topMargin = 40;
+    $topMargin = 100;
   } else {
-    $topMargin = 60;
+    $topMargin = 120;
   }
-  if ($el.find('.more-info').hasClass('blockOpen')) { // If the active item is already open, we close it.
+  if ($el.find('.more-info').hasClass('blockOpen')) { // If the active element is already open, we close it.
     $('html, body').animate({ scrollTop: $el.find('.visible-block').offset().top - $topMargin }, 500, 'linear');
     elClose($el);
-  } else { // 
-    var $openEl = $el.siblings('.content').find('.more-info.blockOpen'); // If the active element is closed,
-     // then we check whether there are neighboring elements with an open block ".more-info"
-
-    if ($el.siblings('.content').find('.more-info').hasClass('blockOpen')) {
-      $('html, body').animate({ scrollTop: $el.find('.visible-block').offset().top - $topMargin }, 500, 'linear');
-      elClose($openEl.parents('.content')); //If in another element the “.more-info” block is open, then we close it.
-      setTimeout(function () {
-        $('html, body').animate({ scrollTop: $el.find('.visible-block').offset().top - $topMargin }, 500, 'linear');
-        elOpen($el); //  And after it is closed, we open the active element.
-      }, 510);
-    } else {
-      $('html, body').animate({ scrollTop: $el.find('.visible-block').offset().top - $topMargin }, 500, 'linear');
-      elOpen($el); // if the other elements are all closed, then we immediately open the active element
-    }
+  } else {  // If the activer element is closed, then we open it
+    $('html, body').animate({ scrollTop: $el.find('.visible-block').offset().top - $topMargin }, 500, 'linear');
+    elOpen($el);
   }
 });
 

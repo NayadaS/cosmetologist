@@ -4,20 +4,27 @@
 html {
   position: relative;
   min-height: 100%;
+}
 
-  body {
-    height: 100%;
-    min-height: .1rem;
+body {
+  height: 100%;
+  min-height: .1rem;
+  padding-top: 6rem;
 
-    &.menu-open {
-      overflow: hidden; // This class is for an open menu.
-    }
+  &.menu-open {
+    overflow: hidden; // This class is for an open menu.
   }
 }
 
 .wrapper {
   width: 93.75%;
   margin: 0 auto;
+}
+
+.hidden-title {
+  margin: 0;
+  color: transparent;
+  font-size: 0;
 }
 
 .overflow-hidden {
@@ -50,6 +57,10 @@ html {
 }
 
 @media (min-width: $large-screen) {
+  body {
+    padding-top: 9rem;
+  }
+
   .main {
     .wrapper {
       width: 78rem;
